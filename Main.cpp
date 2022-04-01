@@ -12,14 +12,11 @@ int main()
 	//Example of War thunders bullet coefficient
 	float bc = -0.0005f;
 	float gravity = -9.81f;
-
-	//Degrees. Needed to create a velocity
+	//Degrees. Needed to create a velocity.
 	float launch_angle = 45.f;
-
 	float bullet_speed = 30.f;//m/s
 
 	vec2 bullet_position = { 0,0 };
-
 	vec2 bullet_fire_direction = { cos(DEG2RAD(launch_angle)), sin(DEG2RAD(launch_angle)) };
 	vec2 bullet_velocity = bullet_fire_direction * bullet_speed;
 
