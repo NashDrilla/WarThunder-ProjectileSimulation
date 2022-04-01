@@ -36,33 +36,9 @@ class GameFuncs
 {
 public:
     
-    float GetDragConstant(float localPlayerPosY)
-    {
-        const auto max_alt = 18300.0f;
-        const auto alt_mult = 1.225f;
-        const auto clamped_alt = fmin(localPlayerPosY, max_alt);
-        const auto unk_1 = 2.2871901e-19f, unk_2 = 5.8355603e-14f,
-            unk_3 = 0.00000000353118f, unk_4 = 0.000095938703f;
-
-
-        return alt_mult *
-            ((max_alt / std::fmax(localPlayerPosY, max_alt)) *
-                ((((((unk_1 * clamped_alt) - unk_2) * clamped_alt) + unk_3) *
-                    clamped_alt) -
-                    unk_4) *
-                clamped_alt +
-                1.0f);
-    }
-
+    float GetDragConstant(float LocalPosY);
     
-    float GetBallisticCoeff(float bulletLength, float bulletMass, float bulletCaliber, float DragConstant)
-    {
-        return -1.0f *
-            (DragConstant * static_cast<float>(M_PI) * 0.5f *
-                std::pow(bulletCaliber * 0.5f, 2.0f) *
-                bulletLength) /
-            bulletMass;
-    }
+    float GetBallisticCoeff(float BulletLength, float BulletMass, float BulletCaliber, float DragConstant);
 
     //Apply a tick of drag to the projectile and return the new position
     void ApplyDrag(float BallisticCoeff, vec2& BulletVel, vec2& BulletPos);
