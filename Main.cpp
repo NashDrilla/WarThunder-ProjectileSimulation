@@ -27,7 +27,6 @@ int main()
 		printf("Time: %f\nPosition [X:%2.2f || Y:%2.2f]\n\n", t, bullet_position.x, bullet_position.y);
 
 		game.ApplyDrag(bc, bullet_velocity, bullet_position);
-		bullet_position += bullet_velocity * game.time_step;
 	}
 
 	printf("Finished\n");
