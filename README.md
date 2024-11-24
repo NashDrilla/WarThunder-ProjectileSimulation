@@ -1,4 +1,4 @@
-# WarThunder-ProjectileSimulation
+# WarThunder-Projectile Simulation
 A simple simulation program (without graphics) showing how **War Thunder** simulates projectile motion with drag applied. You may need to adjust certain parameters (e.g., velocity) to adapt the simulation to the game.
 
 ## Features
