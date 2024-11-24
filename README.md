@@ -6,3 +6,5 @@ A simple simulation program (without graphics) showing how **War Thunder** simul
 - **Drag Calculation**: Implements drag forces to simulate realistic motion.
 - **Physics Accuracy**: Includes real-world constants (e.g., gravity) and equations for ballistic coefficient and drag constant.
 - **Customizable Parameters**: Adjust velocity, launch angle, and other parameters to explore various scenarios.
+
+![Simulation Example](simulate.png "Simulation Output Example")
